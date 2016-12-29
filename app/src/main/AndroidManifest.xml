@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.bwf.p1_landz">
+
+
+
+        <uses-permission android:name="android.permission.INTERNET"/>
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+        <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <!-- 打电话 发短信 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".ui.MainActivity"/>
+        <activity android:name=".ui.welcome.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.welcome.GuidActivity"/>
+        <activity android:name=".ui.account.MineActivity"/>
+        <activity android:name=".ui.appreciatehouses.AppreciateBuildActivity"/>
+        <activity android:name=".ui.map.BMapSearchBuildingActivity"/>
+        <activity android:name=".ui.onlinevilla.OnlineBuildActivity"/>
+        <activity android:name=".ui.renthouse.RentHouseActivity"/>
+        <activity android:name=".ui.search.SearchActivity"/>
+        <activity android:name=".ui.sellvilla.BuildAdviserActivity"/>
+        <activity android:name=".ui.onevilla.OneBuildingActivity"/>
+        <activity android:name=".ui.studyvilla.StudyActivity"/>
+        <activity android:name=".ui.onlinevilla.SelectMoreActivity"/>
+        <activity android:name=".ui.onlinevilla.OnlineBuildActivity_Bwf"/>
+        <activity android:name=".ui.studyvilla.StudyDetailActivity"/>
+        <activity android:name=".ui.onlinevilla.HouseOneDetailActivity"/>
+        <activity android:name=".ui.onlinevilla.HouseTwoDetailActivity"/>
+        <activity android:name=".ui.onlinevilla.LookPhotoActivity"/>
+
+        <!-- 友盟分享 -->
+        <!-- 分享编辑页 -->
+        <!--<activity-->
+            <!--android:name="com.umeng.socialize.view.ShareActivity"-->
+            <!--android:configChanges="orientation|keyboard"-->
+            <!--android:launchMode="singleTask"-->
+            <!--android:noHistory="true"-->
+            <!--android:theme="@style/Theme.UMDialog"-->
+            <!--android:windowSoftInputMode="stateVisible|adjustResize" >-->
+        <!--</activity>-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+          />
+
+
+    </application>
+
+</manifest>
